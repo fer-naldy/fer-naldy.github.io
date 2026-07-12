@@ -8,52 +8,31 @@ const CONFIG = {
   projects: {
     github: {
       display: true,
-      header: 'Github Projects',
-      mode: 'automatic',
+      header: 'Featured Projects',
+      mode: 'manual', // <--- Kunci utamanya di sini, kita set manual
       automatic: {
         sortBy: 'stars',
         limit: 8,
         exclude: {
           forks: false,
-          projects: ['fer-naldy.github.io'],
+          projects: [],
         },
       },
       manual: {
-        projects: [],
+        // Daftar repo yang beneran mau ditampilin (bebas gunung abu-abu)
+        projects: [
+          'fer-naldy/Topic-Level-Sentiment-Analysis-to-User-Reviews-of-the-PLN-Mobile-Application-on-Google-Play-Store',
+          'fer-naldy/Multi-Platform-API-Data-Scraping',
+          'fer-naldy/Online-Bookstore-Database-System',
+          'fer-naldy/EDA-Data-Mining-on-Health-Data',
+          'fer-naldy/Exploratory-Data-Analysis-vabout-Building-Energy-Usage',
+          'fer-naldy/Tweet-Sentiment-Analysis-of-the-Johnny-Depp-and-Amber-Heard-Case-on-Twitter'
+        ],
       },
     },
     external: {
       header: 'My Projects',
-      projects: [
-        {
-          title: 'Topic-Level Sentiment Analysis (PLN Mobile)',
-          description:
-            'Executed advanced topic-level sentiment analysis on user reviews using BERT-NN, achieving 96% classification accuracy, and BERT-EFCM for topic extraction.',
-          imageUrl: '',
-          link: 'https://github.com/fer-naldy/Topic-Level-Sentiment-Analysis-to-User-Reviews-of-the-PLN-Mobile-Application-on-Google-Play-Store',
-        },
-        {
-          title: 'Multi-Platform API Data Scraping',
-          description:
-            'Built an end-to-end Python-based API data scraping pipeline, extracting data from multiple platforms, transforming complex JSON responses into structured datasets with Pandas.',
-          imageUrl: '',
-          link: 'https://github.com/fer-naldy/Multi-Platform-API-Data-Scraping',
-        },
-        {
-          title: 'Online Bookstore Database System',
-          description:
-            'Designed and implemented a SQL-based online bookstore database supporting full CRUD operations and customer purchase analysis to enable personalized recommendations.',
-          imageUrl: '',
-          link: 'https://github.com/fer-naldy/Online-Bookstore-Database-System',
-        },
-        {
-          title: 'EDA & Data Mining on Health Data',
-          description:
-            'Identified key health insights using Logistic Regression, revealing the most prevalent diseases and the effects of marital status and obesity on mental health outcomes.',
-          imageUrl: '',
-          link: 'https://github.com/fer-naldy/EDA-Data-Mining-on-Health-Data',
-        },
-      ],
+      projects: [], // <--- Dikosongkan biar gak ada placeholder gunung
     },
   },
   seo: { title: 'Fernaldy - Data Analyst Portfolio', description: 'Statistics graduate and Data Analyst', imageURL: '' },

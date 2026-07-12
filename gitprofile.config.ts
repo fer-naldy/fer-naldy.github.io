@@ -80,7 +80,7 @@ const CONFIG = {
     email: 'fernaldyy12@gmail.com',
   },
   resume: {
-    fileUrl: '', 
+    fileUrl: 'https://raw.githubusercontent.com/fer-naldy/fer-naldy.github.io/main/CV_Fernaldy_2026.pdf', 
   },
   skills: [
     // Programming, BI, & Database

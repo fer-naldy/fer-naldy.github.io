@@ -15,7 +15,7 @@ const CONFIG = {
         limit: 8,
         exclude: {
           forks: false,
-          projects: [],
+          projects: ['fer-naldy.github.io'],
         },
       },
       manual: {

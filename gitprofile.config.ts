@@ -23,42 +23,35 @@ const CONFIG = {
       },
     },
     external: {
-      header: 'Featured Projects',
+      header: 'My Projects',
       projects: [
         {
-          title: 'Topic-Level Sentiment Analysis to Reviews of the PLN Mobile',
+          title: 'Topic-Level Sentiment Analysis (PLN Mobile)',
           description:
             'Executed advanced topic-level sentiment analysis on user reviews using BERT-NN, achieving 96% classification accuracy, and BERT-EFCM for topic extraction.',
           imageUrl: '',
-          link: 'https://github.com/fer-naldy',
+          link: 'https://github.com/fer-naldy/Topic-Level-Sentiment-Analysis-to-User-Reviews-of-the-PLN-Mobile-Application-on-Google-Play-Store',
         },
         {
           title: 'Multi-Platform API Data Scraping',
           description:
             'Built an end-to-end Python-based API data scraping pipeline, extracting data from multiple platforms, transforming complex JSON responses into structured datasets with Pandas.',
           imageUrl: '',
-          link: 'https://github.com/fer-naldy',
-        },
-        {
-          title: 'EDA & Data Mining on Health Data',
-          description:
-            'Identified key health insights using Logistic Regression, revealing the most prevalent diseases and the effects of marital status and obesity on mental health outcomes.',
-          imageUrl: '',
-          link: 'https://github.com/fer-naldy',
+          link: 'https://github.com/fer-naldy/Multi-Platform-API-Data-Scraping',
         },
         {
           title: 'Online Bookstore Database System',
           description:
             'Designed and implemented a SQL-based online bookstore database supporting full CRUD operations and customer purchase analysis to enable personalized recommendations.',
           imageUrl: '',
-          link: 'https://github.com/fer-naldy',
+          link: 'https://github.com/fer-naldy/Online-Bookstore-Database-System',
         },
         {
-          title: 'Building Energy Usage EDA',
+          title: 'EDA & Data Mining on Health Data',
           description:
-            'Identified and synthesized key insights from ASHRAE research to support and inform approaches for predicting building energy consumption.',
+            'Identified key health insights using Logistic Regression, revealing the most prevalent diseases and the effects of marital status and obesity on mental health outcomes.',
           imageUrl: '',
-          link: 'https://github.com/fer-naldy',
+          link: 'https://github.com/fer-naldy/EDA-Data-Mining-on-Health-Data',
         },
       ],
     },
@@ -87,7 +80,6 @@ const CONFIG = {
     email: 'fernaldyy12@gmail.com',
   },
   resume: {
-    // Nanti ganti dengan link raw PDF CV-mu
     fileUrl: '', 
   },
   skills: [
@@ -110,7 +102,7 @@ const CONFIG = {
     },
     {
       company: 'Kementerian Perindustrian Republik Indonesia',
-      position: 'Industrial Data Analyst Intern',
+      position: 'Industrial Data Analyst Intern (MSIB)',
       from: 'Sep 2024',
       to: 'Dec 2024',
       companyLink: '',

@@ -19,13 +19,14 @@ const CONFIG = {
         },
       },
       manual: {
+        // Susunan disesuaikan dengan Pinned Projects di GitHub
         projects: [
           'fer-naldy/Topic-Level-Sentiment-Analysis-to-User-Reviews-of-the-PLN-Mobile-Application-on-Google-Play-Store',
-          'fer-naldy/Multi-Platform-API-Data-Scraping',
+          'fer-naldy/ispu-jakarta-analysis',
           'fer-naldy/Online-Bookstore-Database-System',
           'fer-naldy/EDA-Data-Mining-on-Health-Data',
-          'fer-naldy/Exploratory-Data-Analysis-vabout-Building-Energy-Usage',
-          'fer-naldy/Tweet-Sentiment-Analysis-of-the-Johnny-Depp-and-Amber-Heard-Case-on-Twitter'
+          'fer-naldy/Multi-Platform-API-Data-Scraping',
+          'fer-naldy/Exploratory-Data-Analysis-vabout-Building-Energy-Usage'
         ],
       },
     },
@@ -71,7 +72,6 @@ const CONFIG = {
     'Pandas', 'NumPy', 'Scikit-learn', 'TensorFlow', 'Keras', 'LaTeX',
   ],
   
-  // --- BAGIAN YANG DIUBAH MULAI DARI SINI ---
   experiences: [
     {
       company: 'PT Bank Danamon Indonesia Tbk',
@@ -87,6 +87,9 @@ const CONFIG = {
       to: 'Dec 2024',
       companyLink: '',
     },
+  ],
+  
+  organizations: [
     {
       company: 'Pojok Statistik',
       position: 'Agent of Statistics for Services and Consultations',
@@ -94,10 +97,6 @@ const CONFIG = {
       to: 'Sep 2024',
       companyLink: '',
     },
-  ],
-  
-  // Array baru khusus untuk komponen OrganizationCard yang baru dibuat
-  organizations: [
     {
       company: 'LOGIKA UI 2024',
       position: 'Vice Head of Secretarial Division',
@@ -120,9 +119,40 @@ const CONFIG = {
       companyLink: '',
     },
   ],
-  // --- BAGIAN YANG DIUBAH SAMPAI SINI ---
 
-  certifications: [],
+  certifications: [
+    {
+      name: 'Pelatihan Berbasis Kompetensi (PBK) Data Analyst',
+      body: 'Data Science Center Universitas Indonesia',
+      year: 'July 2026',
+      link: 'https://drive.google.com/file/d/1JXqGLA7TLoZnr-b8MkJKdHx9Hm-KeGl4/view?usp=drive_link',
+    },
+    {
+      name: 'AWS Academy Graduate - Generative AI Foundations - Training Badge',
+      body: 'Amazon Web Services (AWS)',
+      year: 'July 2026',
+      link: 'https://www.credly.com/badges/28838a0f-8d45-4a8a-8dfe-324fcf81e86f/linked_in_profile',
+    },
+    {
+      name: 'Data Scientist Supervisor - Nasional',
+      body: 'Digital Talent Scholarship',
+      year: 'July 2026',
+      link: 'https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=21211994840-2072',
+    },
+    {
+      name: 'Associate Data Scientist',
+      body: 'Digital Talent Scholarship',
+      year: 'July 2026',
+      link: 'https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=21211993840-7779',
+    },
+    {
+      name: 'Artificial Intelligence - AWS',
+      body: 'Digital Talent Scholarship',
+      year: 'July 2026',
+      link: 'https://digitalent.komdigi.go.id/cek-sertifikat?registrasi=21212378840-282',
+    }
+  ],
+  
   educations: [
     {
       institution: 'Universitas Indonesia',

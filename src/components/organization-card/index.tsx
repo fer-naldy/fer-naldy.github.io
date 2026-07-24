@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-// Kita tetap memakai tipe SanitizedExperience agar tidak perlu repot mengubah interface bawaan
 import { SanitizedExperience } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
@@ -29,12 +28,11 @@ const ListItem = ({
   </li>
 );
 
-// 1. Ubah nama komponen menjadi OrganizationCard
 const OrganizationCard = ({
-  organizations, // 2. Ubah props menjadi organizations
+  organizations,
   loading,
 }: {
-  organizations: SanitizedExperience[]; 
+  organizations: SanitizedExperience[];
   loading: boolean;
 }) => {
   const renderSkeleton = () => {
@@ -67,7 +65,6 @@ const OrganizationCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              {/* 3. Ubah Judul Card di sini */}
               <span className="text-base-content opacity-70">Organizations</span>
             )}
           </h5>
@@ -78,7 +75,6 @@ const OrganizationCard = ({
               renderSkeleton()
             ) : (
               <Fragment>
-                {/* 4. Map data dari organizations */}
                 {organizations.map((org, index) => (
                   <ListItem
                     key={index}
@@ -86,9 +82,7 @@ const OrganizationCard = ({
                     position={org.position}
                     company={org.company}
                     companyLink={
-                      org.companyLink
-                        ? org.companyLink
-                        : undefined
+                      org.companyLink ? org.companyLink : undefined
                     }
                   />
                 ))}
@@ -101,5 +95,4 @@ const OrganizationCard = ({
   );
 };
 
-// 5. Export nama baru
 export default OrganizationCard;

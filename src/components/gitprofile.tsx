@@ -20,6 +20,8 @@ import { Profile } from '../interfaces/profile';
 import DetailsCard from './details-card';
 import SkillCard from './skill-card';
 import ExperienceCard from './experience-card';
+// --- TAMBAHAN 1: Import komponen OrganizationCard ---
+import OrganizationCard from './organization-card'; 
 import EducationCard from './education-card';
 import CertificationCard from './certification-card';
 import { GithubProject } from '../interfaces/github-project';
@@ -223,6 +225,16 @@ const GitProfile = ({ config }: { config: Config }) => {
                       experiences={sanitizedConfig.experiences}
                     />
                   )}
+
+                  {/* --- TAMBAHAN 2: Merender OrganizationCard --- */}
+                  {(config as any).organizations && (config as any).organizations.length !== 0 && (
+                    <OrganizationCard
+                      loading={loading}
+                      organizations={(config as any).organizations}
+                    />
+                  )}
+                  {/* --------------------------------------------- */}
+
                   {sanitizedConfig.certifications.length !== 0 && (
                     <CertificationCard
                       loading={loading}

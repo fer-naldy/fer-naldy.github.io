@@ -1,0 +1,105 @@
+import React, { Fragment } from 'react';
+// Kita tetap memakai tipe SanitizedExperience agar tidak perlu repot mengubah interface bawaan
+import { SanitizedExperience } from '../../interfaces/sanitized-config';
+import { skeleton } from '../../utils';
+
+const ListItem = ({
+  time,
+  position,
+  company,
+  companyLink,
+}: {
+  time: React.ReactNode;
+  position?: React.ReactNode;
+  company?: React.ReactNode;
+  companyLink?: string;
+}) => (
+  <li className="mb-5 ml-4">
+    <div
+      className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
+      style={{ left: '-4.5px' }}
+    ></div>
+    <div className="my-0.5 text-xs">{time}</div>
+    <h3 className="font-semibold">{position}</h3>
+    <div className="mb-4 font-normal">
+      <a href={companyLink} target="_blank" rel="noreferrer">
+        {company}
+      </a>
+    </div>
+  </li>
+);
+
+// 1. Ubah nama komponen menjadi OrganizationCard
+const OrganizationCard = ({
+  organizations, // 2. Ubah props menjadi organizations
+  loading,
+}: {
+  organizations: SanitizedExperience[]; 
+  loading: boolean;
+}) => {
+  const renderSkeleton = () => {
+    const array = [];
+    for (let index = 0; index < 2; index++) {
+      array.push(
+        <ListItem
+          key={index}
+          time={skeleton({
+            widthCls: 'w-5/12',
+            heightCls: 'h-4',
+          })}
+          position={skeleton({
+            widthCls: 'w-6/12',
+            heightCls: 'h-4',
+            className: 'my-1.5',
+          })}
+          company={skeleton({ widthCls: 'w-6/12', heightCls: 'h-3' })}
+        />,
+      );
+    }
+
+    return array;
+  };
+  return (
+    <div className="card shadow-lg card-sm bg-base-100">
+      <div className="card-body">
+        <div className="mx-3">
+          <h5 className="card-title">
+            {loading ? (
+              skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
+            ) : (
+              {/* 3. Ubah Judul Card di sini */}
+              <span className="text-base-content opacity-70">Organizations</span>
+            )}
+          </h5>
+        </div>
+        <div className="text-base-content">
+          <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+            {loading ? (
+              renderSkeleton()
+            ) : (
+              <Fragment>
+                {/* 4. Map data dari organizations */}
+                {organizations.map((org, index) => (
+                  <ListItem
+                    key={index}
+                    time={`${org.from} - ${org.to}`}
+                    position={org.position}
+                    company={org.company}
+                    companyLink={
+                      org.companyLink
+                        ? org.companyLink
+                        : undefined
+                    }
+                  />
+                ))}
+              </Fragment>
+            )}
+          </ol>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// 5. Export nama baru
+export default OrganizationCard;

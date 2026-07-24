@@ -9,7 +9,7 @@ const CONFIG = {
     github: {
       display: true,
       header: 'Featured Projects',
-      mode: 'manual', // <--- Kunci utamanya di sini, kita set manual
+      mode: 'manual', 
       automatic: {
         sortBy: 'stars',
         limit: 8,
@@ -19,7 +19,6 @@ const CONFIG = {
         },
       },
       manual: {
-        // Daftar repo yang beneran mau ditampilin (bebas gunung abu-abu)
         projects: [
           'fer-naldy/Topic-Level-Sentiment-Analysis-to-User-Reviews-of-the-PLN-Mobile-Application-on-Google-Play-Store',
           'fer-naldy/Multi-Platform-API-Data-Scraping',
@@ -32,7 +31,7 @@ const CONFIG = {
     },
     external: {
       header: 'My Projects',
-      projects: [], // <--- Dikosongkan biar gak ada placeholder gunung
+      projects: [], 
     },
   },
   seo: { title: 'Fernaldy - Data Analyst Portfolio', description: 'Statistics graduate and Data Analyst', imageURL: '' },
@@ -71,6 +70,8 @@ const CONFIG = {
     // Libraries & Tools
     'Pandas', 'NumPy', 'Scikit-learn', 'TensorFlow', 'Keras', 'LaTeX',
   ],
+  
+  // --- BAGIAN YANG DIUBAH MULAI DARI SINI ---
   experiences: [
     {
       company: 'PT Bank Danamon Indonesia Tbk',
@@ -93,6 +94,10 @@ const CONFIG = {
       to: 'Sep 2024',
       companyLink: '',
     },
+  ],
+  
+  // Array baru khusus untuk komponen OrganizationCard yang baru dibuat
+  organizations: [
     {
       company: 'LOGIKA UI 2024',
       position: 'Vice Head of Secretarial Division',
@@ -115,6 +120,8 @@ const CONFIG = {
       companyLink: '',
     },
   ],
+  // --- BAGIAN YANG DIUBAH SAMPAI SINI ---
+
   certifications: [],
   educations: [
     {

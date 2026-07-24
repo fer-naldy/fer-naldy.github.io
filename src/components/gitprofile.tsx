@@ -302,4 +302,4 @@ const GitProfile = ({ config }: { config: Config }) => {
   );
 };
 
-export default GitProfile;
+export default GitProfile; 
